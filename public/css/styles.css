@@ -1,0 +1,4 @@
+
+/* Animaciones suaves */
+.tab-btn { transition: all 200ms ease; }
+.tab-btn:focus { outline: none; box-shadow: 0 0 0 2px #23534722; }

@@ -1,0 +1,14 @@
+{
+  "name": "tuorg/auth-mvc",
+  "description": "Sistema de login MVC con PHP, MySQL, Tailwind y PHPMailer",
+  "type": "project",
+  "require": {
+    "php": ">=8.0",
+    "phpmailer/phpmailer": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "": ["controller/", "model/"]
+    }
+  }
+}
