@@ -208,9 +208,16 @@ class AuthController {
             'id' => $user['id'],
             'correo' => $user['correo'],
             'nombre_usuario' => $user['nombre_usuario'],
+            'nombre' => $user['nombre'] ?? $user['nombre_usuario'],
+            'rol' => $user['rol'] ?? 'usuario',
+            'area' => $user['area'] ?? 'COM',
         ];
-        $this->flash('¡Inicio de sesión exitoso!', 'success');
-        header('Location: /index.php');
+
+        if (($user['rol'] ?? 'usuario') === 'admin') {
+            header('Location: index.php?action=admin_dashboard');
+        } else {
+            header('Location: index.php?action=dashboard');
+        }
         exit;
     }
 
@@ -277,7 +284,7 @@ class AuthController {
     }
 
     private function redirectToLogin(): void {
-        header('Location: /index.php');
+        header('Location: index.php');
         exit;
     }
 

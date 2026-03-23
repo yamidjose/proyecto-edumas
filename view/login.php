@@ -11,22 +11,23 @@
     body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-tr from-[#f8fafc] via-[#f1f5f9] to-[#ecfdf5] flex items-center justify-center py-12 px-4">
+<body class="min-h-screen  bg-gradient-to-tr from-[#f8fafc] via-[#f1f5f9] to-[#ecfdf5] flex items-center justify-center py-12 px-4">
   
-  <div class="w-full max-w-md transition-all duration-500 ease-in-out">
+  <div class="w-[400px]  max-w-md transition-all duration-500 ease-in-out">
     
-    <div class="text-center mb-10">
-      <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">Acceso Institucional</h1>
-      <p class="mt-3 text-slate-500 text-sm font-medium uppercase tracking-wider">Portal de Verificación Segura</p>
-    </div>
+    
 
     <div class="bg-white/80 backdrop-blur-xl rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-5 border border-white">
-      <?php include __DIR__ . '/partials/flash.php'; ?>
+      <div class="text-center mb-8">
+      <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">Acceso Institucional</h1>
+      <p class="mt-1 text-slate-500 text-sm font-medium uppercase tracking-wider">Portal de Verificación Segura</p>
+    </div>
+    <?php include __DIR__ . '/partials/flash.php'; ?>
 
       <form id="form-login" method="post" action="index.php?action=password" class="space-y-6<?= isset($_SESSION['awaiting_code']) ? ' hidden' : '' ?>">
         <input type="hidden" name="csrf" value="<?= htmlspecialchars($csrf) ?>">
         
-        <div class="group space-y-2">
+        <div class="group space-y-1">
           <label class="block text-sm font-bold text-slate-700 ml-1">Nombre de usuario</label>
           <input 
             type="text" 
@@ -37,7 +38,7 @@
           >
         </div>
 
-        <div class="group space-y-2">
+        <div class="group space-y-1">
           <label class="block text-sm font-bold text-slate-700 ml-1">Contraseña</label>
           <input 
             type="password" 
@@ -49,7 +50,7 @@
           >
         </div>
 
-        <div class="group space-y-2">
+        <div class="group space-y-1">
           <label class="block text-sm font-bold text-slate-700 ml-1">Correo electrónico</label>
           <input 
             type="email" 
@@ -124,13 +125,13 @@
         </div>
       </div>
 
-      <p class="mt-8 text-center text-[10px] text-slate-400 font-medium leading-relaxed">
+      <p class="mt-4 text-center text-[10px] text-slate-400 font-medium leading-relaxed">
         SISTEMA DE SEGURIDAD PROTEGIDO<br>
         © 2026 EDUMAS - Todos los derechos reservados
       </p>
     </div>
 
-    <div class="mt-8 flex items-center justify-center gap-6 opacity-60">
+    <div class="mt-4 flex items-center justify-center gap-6 opacity-60">
       <div class="flex items-center gap-1.5">
         <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 4.946-2.597 9.174-6.5 11.29a11.715 11.715 0 01-1.5.71 11.715 11.715 0 01-1.5-.71C4.596 16.174 2 11.945 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>

@@ -24,7 +24,7 @@ return [
     'from_name'    => 'Soporte',
     'smtp' => [
         'host' => 'sandbox.smtp.mailtrap.io',
-        'port' => 587, // o 2525, cualquiera de los soportados
+        'port' => 2525, // o 2525, cualquiera de los soportados
         'username' => '5fc7cc88d2cbdf',
         'password' => 'f7dea61938299e',
         'encryption' => 'tls', // Mailtrap usa STARTTLS, así que TLS es correcto
