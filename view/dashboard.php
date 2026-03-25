@@ -34,8 +34,8 @@ $consultaGlobal = $user['rol'] === 'usuario' && (($filtros['area'] ?? 'mi_area')
     <link rel="stylesheet" href="css/styles.css">
     <style>
         :root {
-            --brand-green: #40B554;
-            --brand-lime: #A8CF45;
+            --brand-green: #62bd71;
+            --brand-lime: #b1bd93;
             --cream-1: #fffdf4;
             --cream-2: #f8f6e8;
             --panel-bg: rgba(255, 252, 244, 0.92);

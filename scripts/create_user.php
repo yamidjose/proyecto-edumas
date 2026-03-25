@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 require_once __DIR__ . '/../model/Database.php';
 
@@ -6,7 +7,8 @@ $config = require __DIR__ . '/../config/config.php';
 $db = new Database($config['db']);
 $pdo = $db->pdo();
 
-function prompt(string $label, bool $hidden = false): string {
+function prompt(string $label, bool $hidden = false): string
+{
     if ($hidden && stripos(PHP_OS, 'WIN') === false) {
         // En UNIX, desactiva echo para password
         echo $label;
@@ -69,7 +71,7 @@ $hash = password_hash($plain, $algo);
 try {
     $stmt = $pdo->prepare('INSERT INTO usuarios (correo, nombre_usuario, nombre, password, rol, area) VALUES (?, ?, ?, ?, ?, ?)');
     $stmt->execute([$email, $username, $nombre, $hash, $rol, $area]);
-    
+
     echo "\n✅ Usuario creado exitosamente\n";
     echo "   ID: " . $pdo->lastInsertId() . "\n";
     echo "   Email: $email\n";

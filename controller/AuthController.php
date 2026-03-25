@@ -203,7 +203,6 @@ class AuthController {
         $this->users->clearVerificationCode($userId);
         unset($_SESSION['awaiting_code']);
 
-        session_regenerate_id(true);
         $_SESSION['user'] = [
             'id' => $user['id'],
             'correo' => $user['correo'],
@@ -212,6 +211,7 @@ class AuthController {
             'rol' => $user['rol'] ?? 'usuario',
             'area' => $user['area'] ?? 'COM',
         ];
+        session_regenerate_id(true);
 
         if (($user['rol'] ?? 'usuario') === 'admin') {
             header('Location: index.php?action=admin_dashboard');
@@ -293,7 +293,7 @@ class AuthController {
     }
 
     private function sendVerificationEmail(string $toEmail, string $username, string $code, \DateTimeInterface $expiresAt): bool {
-        $subject = 'Tu código temporal';
+        $subject = 'Tu codigo temporal';
         $fromEmail = $this->config['mail']['from_email'];
         $fromName  = $this->config['mail']['from_name'];
 

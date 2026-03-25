@@ -73,7 +73,7 @@
         <div class="bg-blue-50/50 border-l-4 border-[#3366cc] p-5 rounded-2xl">
           <div class="flex items-center gap-2 mb-1">
              <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
-             <p class="text-sm tex  t-blue-900 font-bold">Usuario confirmado</p>
+             <p class="text-sm text-blue-900 font-bold">Usuario confirmado</p>
           </div>
           <p class="text-xs text-blue-700 leading-relaxed">Hemos enviado un código de 6 dígitos a su correo electrónico institucional.</p>
         </div>
